@@ -2,21 +2,29 @@
 
 //alert(3+3) we are using node.js not a browser
 
-//console.log('Shrinivas'); console.log('Mandhare') //Allowed but Avoid.Not readable because the 2 statements are on Same Line
+//console.log('Shrinivas'); console.log('Mandhare') 
+//Allowed but Avoid.Not readable because the 2 statements are on Same Line
 
-let name="Hitesh";
-let age=32;
-let isLoggedIn=true;
+let name = "Hitesh";
+let age = 32;
+let isLoggedIn = true;
 
 
 /*
 DataTypes
-String =>""
-Number =>range 2 to 2^53;
-boolean =>true or false
-null => Empty Value
-undefined =>Value is Not assigned yet
-symbol => unique
+A)Primitive types
+1.String =>""
+2.Number =>range 2 to 2^53;
+3.boolean =>true or false
+4.null => Empty Value
+5.undefined =>Value is Not assigned yet
+6.symbol => unique
+7.BigInt
+
+B)Reference types/Non Primitive types
+1.Array
+2.Object
+3.Function
 
 What is the Difference Between null and undefined?
 In JavaScript, `null` and `undefined` are two distinct values that indicate the absence of a meaningful value, but they are used in 
@@ -54,10 +62,43 @@ situations where a value is missing or uninitialized, and `null` is explicitly u
 variable or property. It's important to be aware of these distinctions when working with JavaScript to avoid unexpected behavior in 
 your code.
 
-*/ 
+*/
 
 console.log(typeof null)
 // object
 
 console.log(typeof undefined)
 // undefined
+
+//Symbols
+let id = Symbol(1);
+let anotherId = Symbol(1);
+console.log(id, anotherId);
+console.log(id === anotherId)//false
+
+//BigInt
+const Pi = 31444444444444444444444n
+
+//Function
+//You Can Treat functions as variables in JavaScript
+const myFunction = function () {
+   console.log('Hello World');
+}
+
+//the return type of non primitive data types is object except return type of function i.e object function
+/*
+Return type of variables in JavaScript
+1) Primitive Datatypes
+       Number => number
+       String  => string
+       Boolean  => boolean
+       null  => object
+       undefined  =>  undefined
+       Symbol  =>  symbol
+       BigInt  =>  bigint
+
+2) Non-primitive Datatypes
+       Arrays  =>  object
+       Function  =>  function
+       Object  =>  object
+*/
