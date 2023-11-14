@@ -42,3 +42,8 @@ console.log(Boolean("Shrinivas"));//true
 //Example 1
 let number = 33
 console.log(String(number));
+
+// the unary plus operator(+) is used for converting its operand to a number
+console.log(+true);
+console.log(+"");
+
